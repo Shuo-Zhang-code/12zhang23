@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+}
+#game-container {
+    width: 375px;
+    margin: 30px auto;
+    position: relative;
+}
+#basketball-canvas {
+    background: #fff;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+#score-board {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+#lottery-modal {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hidden {
+    display: none !important; /* 确保隐藏状态优先级 */
+}
+#wheel-container {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+#wheel-canvas {
+    display: block;
+    margin: 0 auto 20px auto;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+#spin-btn, #close-modal {
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: #ff9800;
+    color: #fff;
+    cursor: pointer;
+}
+#prize-result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #e91e63;
+}
+
+/* 预加载游戏图片 */
+body::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url('basketball.png') url('basket.png') ;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微信投篮抽奖小游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="basketball-canvas" width="375" height="600"></canvas>
+        <div id="score-board">
+            分数：<span id="score">0</span>
+        </div>
+        <div id="lottery-modal" class="hidden">
+            <div id="wheel-container">
+                <canvas id="wheel-canvas" width="300" height="300"></canvas>
+                <button id="spin-btn">抽奖</button>
+            </div>
+            <div id="prize-result" class="hidden"></div>
+            <button id="close-modal">关闭</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+    <script src="wheel.js"></script>
+</body>
+</html>
